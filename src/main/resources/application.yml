@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          url: jdbc:mysql://localhost:3306/druidtest?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_1:
+          url: jdbc:mysql://localhost:3306/iotdb_integration?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_2:
+          url: jdbc:mysql://localhost:3306/redistest?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_3:
+          url: jdbc:iotdb://127.0.0.1:6667/
+          username: root
+          password: root
+          driver-class-name: org.apache.iotdb.jdbc.IoTDBDriver
+
+        #......省略
+        #以上会配置一个默认库master，一个组slave下有两个子库slave_1,slave_2,slave_3
