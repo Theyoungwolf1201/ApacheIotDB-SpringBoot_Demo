@@ -1,8 +1,8 @@
 spring:
   datasource:
     dynamic:
-      primary: master #ÉèÖÃÄ¬ÈÏµÄÊı¾İÔ´»òÕßÊı¾İÔ´×é,Ä¬ÈÏÖµ¼´Îªmaster
-      strict: false #ÑÏ¸ñÆ¥ÅäÊı¾İÔ´,Ä¬ÈÏfalse. trueÎ´Æ¥Åäµ½Ö¸¶¨Êı¾İÔ´Ê±Å×Òì³£,falseÊ¹ÓÃÄ¬ÈÏÊı¾İÔ´
+      primary: master #è®¾ç½®é»˜è®¤çš„æ•°æ®æºæˆ–è€…æ•°æ®æºç»„,é»˜è®¤å€¼å³ä¸ºmaster
+      strict: false #ä¸¥æ ¼åŒ¹é…æ•°æ®æº,é»˜è®¤false. trueæœªåŒ¹é…åˆ°æŒ‡å®šæ•°æ®æºæ—¶æŠ›å¼‚å¸¸,falseä½¿ç”¨é»˜è®¤æ•°æ®æº
       datasource:
         master:
           url: jdbc:mysql://localhost:3306/druidtest?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
@@ -20,10 +20,11 @@ spring:
           password: root
           driver-class-name: com.mysql.jdbc.Driver
         slave_3:
-          url: jdbc:iotdb://127.0.0.1:6667/
+#          url: jdbc:iotdb://127.0.0.1:6667/
+          url: jdbc:iotdb://124.70.78.4:6667/
           username: root
           password: root
           driver-class-name: org.apache.iotdb.jdbc.IoTDBDriver
 
-        #......Ê¡ÂÔ
-        #ÒÔÉÏ»áÅäÖÃÒ»¸öÄ¬ÈÏ¿âmaster£¬Ò»¸ö×éslaveÏÂÓĞÁ½¸ö×Ó¿âslave_1,slave_2,slave_3
+        #......çœç•¥
+        #ä»¥ä¸Šä¼šé…ç½®ä¸€ä¸ªé»˜è®¤åº“masterï¼Œä¸€ä¸ªç»„slaveä¸‹æœ‰ä¸¤ä¸ªå­åº“slave_1,slave_2,slave_3

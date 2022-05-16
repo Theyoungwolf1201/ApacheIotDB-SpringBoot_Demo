@@ -112,6 +112,20 @@
         </dependency>
         <!--系统使用率导包结束-->
 
+        <!--Milo客户端的依赖-->
+        <dependency>
+            <groupId>org.eclipse.milo</groupId>
+            <artifactId>sdk-client</artifactId>
+            <version>0.6.3</version>
+        </dependency>
+
+        <!--Milo客户端的依赖-->
+        <dependency>
+            <groupId>org.eclipse.milo</groupId>
+            <artifactId>sdk-server</artifactId>
+            <version>0.6.3</version>
+        </dependency>
+
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
